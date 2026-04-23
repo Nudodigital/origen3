@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-stone: #0D0C0B;
+  --color-gold: #C9A96E;
+  --color-cream: #F2EDE4;
+  --color-muted: #6B6560;
+  --color-surface: #181614;
+  --color-border: #2D2A26;
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-jakarta);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0D0C0B;
+  color: #F2EDE4;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #C9A96E;
+  color: #0D0C0B;
+}
+
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 28s linear infinite;
+}
