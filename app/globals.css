@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-stone: #0D0C0B;
-  --color-gold: #C9A96E;
-  --color-cream: #F2EDE4;
-  --color-muted: #6B6560;
-  --color-surface: #181614;
-  --color-border: #2D2A26;
+  --color-stone: #FAFAF8;
+  --color-gold: #B8935A;
+  --color-ink: #1A1714;
+  --color-muted: #9C9189;
+  --color-surface: #F5EFE6;
+  --color-border: #D5CEC6;
   --font-display: var(--font-playfair);
   --font-body: var(--font-jakarta);
 }
@@ -16,15 +16,15 @@ html {
 }
 
 body {
-  background-color: #0D0C0B;
-  color: #F2EDE4;
+  background-color: #FAFAF8;
+  color: #1A1714;
   font-family: var(--font-jakarta), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #C9A96E;
-  color: #0D0C0B;
+  background: #B8935A;
+  color: #FAFAF8;
 }
 
 @keyframes ticker {

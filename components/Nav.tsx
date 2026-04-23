@@ -30,16 +30,16 @@ export default function Nav() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#0D0C0B]/95 backdrop-blur-sm border-b border-[#2D2A26]"
+            ? "bg-[#FAFAF8]/95 backdrop-blur-sm border-b border-[#D5CEC6]"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-18 py-5">
           <Link
             href="/"
-            className="font-display text-xl text-[#F2EDE4] tracking-[0.15em] uppercase"
+            className="font-display text-xl text-[#1A1714] tracking-[0.15em] uppercase"
           >
-            Origen<span className="text-[#C9A96E]">3</span>
+            Origen<span className="text-[#B8935A]">3</span>
           </Link>
 
           <ul className="hidden md:flex items-center gap-10">
@@ -47,7 +47,7 @@ export default function Nav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-[11px] tracking-[0.22em] uppercase text-[#6B6560] hover:text-[#F2EDE4] transition-colors duration-300"
+                  className="text-[11px] tracking-[0.22em] uppercase text-[#9C9189] hover:text-[#1A1714] transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
@@ -61,17 +61,17 @@ export default function Nav() {
             aria-label="Abrir menú"
           >
             <span
-              className={`block h-px w-full bg-[#F2EDE4] transition-all duration-300 origin-center ${
+              className={`block h-px w-full bg-[#1A1714] transition-all duration-300 origin-center ${
                 open ? "rotate-45 translate-y-[7px]" : ""
               }`}
             />
             <span
-              className={`block h-px w-full bg-[#F2EDE4] transition-all duration-300 ${
+              className={`block h-px w-full bg-[#1A1714] transition-all duration-300 ${
                 open ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block h-px w-full bg-[#F2EDE4] transition-all duration-300 origin-center ${
+              className={`block h-px w-full bg-[#1A1714] transition-all duration-300 origin-center ${
                 open ? "-rotate-45 -translate-y-[7px]" : ""
               }`}
             />
@@ -86,7 +86,7 @@ export default function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="fixed inset-0 z-40 bg-[#0D0C0B] flex flex-col items-center justify-center gap-10"
+            className="fixed inset-0 z-40 bg-[#FAFAF8] flex flex-col items-center justify-center gap-10"
           >
             {links.map((link, i) => (
               <motion.div
@@ -102,7 +102,7 @@ export default function Nav() {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="font-display text-5xl text-[#F2EDE4] hover:text-[#C9A96E] transition-colors"
+                  className="font-display text-5xl text-[#1A1714] hover:text-[#B8935A] transition-colors"
                 >
                   {link.label}
                 </Link>
