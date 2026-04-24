@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #FFFFFF;
-  --color-primary: #1A1A1A;
-  --color-accent: #C9A96E;
-  --color-text: #111111;
-  --color-surface: #F5F5F5;
-  --color-border: #E5E5E5;
-  --color-muted: #6B6B6B;
+  --color-background: #0E100F;
+  --color-surface: #16181A;
+  --color-elevated: #1D2022;
+  --color-text: #E8E2D6;
+  --color-muted: #8C8478;
+  --color-terracotta: #C67B55;
+  --color-sage: #7A8C5C;
+  --color-border: #2A2C2E;
   --font-display: var(--font-playfair);
   --font-body: var(--font-inter);
 }
@@ -17,23 +18,30 @@ html {
 }
 
 body {
-  background-color: #FFFFFF;
-  color: #111111;
+  background-color: #0E100F;
+  color: #E8E2D6;
   font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.75;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair), Georgia, serif;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+em {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
 }
 
 ::selection {
-  background: #1A1A1A;
-  color: #FFFFFF;
+  background: #C67B55;
+  color: #0E100F;
 }
 
 @keyframes ticker {
@@ -42,5 +50,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-ticker {
-  animation: ticker 28s linear infinite;
+  animation: ticker 42s linear infinite;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.55; }
+}
+
+.hero-glow {
+  animation: glow 8s ease-in-out infinite;
 }

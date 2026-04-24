@@ -30,16 +30,16 @@ export default function Nav() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#FFFFFF]/95 backdrop-blur-sm border-b border-[#E5E5E5]"
+            ? "bg-[#0E100F]/85 backdrop-blur-md border-b border-[#2A2C2E]"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20 py-5">
           <Link
             href="/"
-            className="font-display font-black text-2xl text-[#111111] tracking-tight uppercase"
+            className="font-display text-2xl text-[#E8E2D6] tracking-tight"
           >
-            Origen<span className="text-[#C9A96E]">3</span>
+            Origen<em className="text-[#C67B55] not-italic">3</em>
           </Link>
 
           <ul className="hidden md:flex items-center gap-10">
@@ -47,7 +47,7 @@ export default function Nav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-[11px] tracking-[0.22em] uppercase font-bold text-[#111111] hover:text-[#C9A96E] transition-colors duration-300"
+                  className="text-[11px] tracking-[0.3em] uppercase text-[#E8E2D6] font-light hover:text-[#C67B55] transition-colors duration-500"
                 >
                   {link.label}
                 </Link>
@@ -61,17 +61,17 @@ export default function Nav() {
             aria-label="Abrir menú"
           >
             <span
-              className={`block h-[2px] w-full bg-[#1A1A1A] transition-all duration-300 origin-center ${
+              className={`block h-px w-full bg-[#E8E2D6] transition-all duration-300 origin-center ${
                 open ? "rotate-45 translate-y-[7px]" : ""
               }`}
             />
             <span
-              className={`block h-[2px] w-full bg-[#1A1A1A] transition-all duration-300 ${
+              className={`block h-px w-full bg-[#E8E2D6] transition-all duration-300 ${
                 open ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block h-[2px] w-full bg-[#1A1A1A] transition-all duration-300 origin-center ${
+              className={`block h-px w-full bg-[#E8E2D6] transition-all duration-300 origin-center ${
                 open ? "-rotate-45 -translate-y-[7px]" : ""
               }`}
             />
@@ -85,8 +85,8 @@ export default function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="fixed inset-0 z-40 bg-[#FFFFFF] flex flex-col items-center justify-center gap-10"
+            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+            className="fixed inset-0 z-40 bg-[#0E100F] flex flex-col items-center justify-center gap-12"
           >
             {links.map((link, i) => (
               <motion.div
@@ -95,14 +95,14 @@ export default function Nav() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   delay: i * 0.08,
-                  duration: 0.5,
+                  duration: 0.6,
                   ease: [0.25, 0.1, 0.25, 1],
                 }}
               >
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="font-display font-black text-6xl tracking-tight uppercase text-[#111111] hover:text-[#C9A96E] transition-colors"
+                  className="font-display text-5xl text-[#E8E2D6] hover:text-[#C67B55] transition-colors"
                 >
                   {link.label}
                 </Link>
