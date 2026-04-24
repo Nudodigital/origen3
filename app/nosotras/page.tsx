@@ -62,13 +62,13 @@ export default function NosotrasPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 lg:pt-44 lg:pb-28 bg-[#FAFAF8]">
+      <section className="pt-36 pb-20 lg:pt-44 lg:pb-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease }}
-            className="text-[10px] tracking-[0.35em] uppercase text-[#B8935A] mb-6"
+            className="text-[10px] tracking-[0.35em] uppercase text-[#B8956A] mb-6"
           >
             El equipo
           </motion.p>
@@ -77,7 +77,7 @@ export default function NosotrasPage() {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.85, delay: 0.1, ease }}
-              className="font-display text-[clamp(3rem,8vw,7rem)] leading-none text-[#1A1714] mb-10"
+              className="font-display text-[clamp(3rem,8vw,7rem)] leading-none text-[#1A1A1A] mb-10"
             >
               Nosotras
             </motion.h1>
@@ -111,7 +111,7 @@ export default function NosotrasPage() {
 
                   {/* Avatar placeholder */}
                   <div className="lg:col-span-3">
-                    <div className="aspect-[3/4] bg-gradient-to-br from-[#EDE8E1] to-[#FAFAF8] border border-[#D5CEC6] flex items-center justify-center">
+                    <div className="aspect-[3/4] bg-gradient-to-br from-[#EDE8E1] to-[#FAF7F2] border border-[#D5CEC6] flex items-center justify-center">
                       <span className="font-display text-5xl text-[#D5CEC6]">
                         O3
                       </span>
@@ -119,10 +119,10 @@ export default function NosotrasPage() {
                   </div>
 
                   <div className="lg:col-span-8">
-                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#B8935A] mb-3">
+                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#B8956A] mb-3">
                       {persona.rol}
                     </p>
-                    <h2 className="font-display text-3xl lg:text-4xl text-[#1A1714] mb-6">
+                    <h2 className="font-display text-3xl lg:text-4xl text-[#1A1A1A] mb-6">
                       {persona.nombre}
                     </h2>
                     <p className="text-sm text-[#9C9189] leading-loose mb-8 max-w-lg">
@@ -147,10 +147,10 @@ export default function NosotrasPage() {
       </section>
 
       {/* Valores */}
-      <section className="py-24 lg:py-32 bg-[#FAFAF8] border-t border-[#D5CEC6]">
+      <section className="py-24 lg:py-32 bg-[#FAF7F2] border-t border-[#D5CEC6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <FadeIn>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8935A] mb-16">
+            <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8956A] mb-16">
               Nuestros valores
             </p>
           </FadeIn>
@@ -159,7 +159,7 @@ export default function NosotrasPage() {
             {valores.map((v, i) => (
               <FadeIn key={v.titulo} delay={i * 0.08}>
                 <div className="border-t border-[#D5CEC6] pt-8">
-                  <h3 className="font-display text-2xl text-[#1A1714] mb-4">
+                  <h3 className="font-display text-2xl text-[#1A1A1A] mb-4">
                     {v.titulo}
                   </h3>
                   <p className="text-sm text-[#9C9189] leading-relaxed">
@@ -176,14 +176,14 @@ export default function NosotrasPage() {
       <section className="py-20 lg:py-28 bg-[#F5EFE6] border-t border-[#D5CEC6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-8">
           <FadeIn>
-            <h2 className="font-display text-3xl lg:text-4xl text-[#1A1714]">
+            <h2 className="font-display text-3xl lg:text-4xl text-[#1A1A1A]">
               ¿Listas para trabajar juntas?
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
             <Link
               href="/contacto"
-              className="inline-flex items-center px-8 py-4 bg-[#B8935A] text-[#FAFAF8] text-xs tracking-[0.25em] uppercase font-medium hover:bg-[#1A1714] transition-colors duration-300 whitespace-nowrap"
+              className="inline-flex items-center px-8 py-4 bg-[#B8956A] text-[#FAF7F2] text-xs tracking-[0.25em] uppercase font-medium hover:bg-[#D4B896] transition-colors duration-300 whitespace-nowrap"
             >
               Contáctanos
             </Link>
