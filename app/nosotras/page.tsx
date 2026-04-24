@@ -22,7 +22,7 @@ function FadeIn({
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease }}
+      transition={{ duration: 0.9, delay, ease }}
       className={className}
     >
       {children}
@@ -62,77 +62,92 @@ export default function NosotrasPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-24 lg:pt-52 lg:pb-36 bg-[#FFFFFF]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease }}
-            className="text-[11px] tracking-[0.35em] uppercase font-bold text-[#C9A96E] mb-8"
+      <section className="relative pt-40 pb-24 lg:pt-52 lg:pb-32 bg-[#0E100F] overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute top-0 left-0 w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] rounded-full pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(198,123,85,0.15) 0%, transparent 60%)",
+          }}
+        />
+        <div className="relative max-w-6xl mx-auto px-6 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease }}
+            className="flex items-center gap-4 mb-10"
           >
-            El equipo
-          </motion.p>
+            <span className="w-10 h-px bg-[#C67B55]" />
+            <p className="text-[11px] tracking-[0.4em] uppercase text-[#C67B55] font-light">
+              El equipo
+            </p>
+          </motion.div>
           <div className="overflow-hidden">
             <motion.h1
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.85, delay: 0.1, ease }}
-              className="font-display font-black text-[clamp(4rem,10vw,9rem)] leading-[0.9] tracking-tighter text-[#111111] mb-12 uppercase"
+              transition={{ duration: 1, delay: 0.1, ease }}
+              className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[1] tracking-tight text-[#E8E2D6] mb-10 font-normal"
             >
-              Nosotras
+              <em className="text-[#C67B55]">Nosotras</em>
             </motion.h1>
           </div>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5, ease }}
-            className="text-xl lg:text-2xl text-[#6B6B6B] max-w-3xl leading-relaxed"
+            transition={{ duration: 0.9, delay: 0.5, ease }}
+            className="font-display text-xl lg:text-2xl text-[#E8E2D6] max-w-3xl leading-[1.4] font-normal"
           >
-            Tres mujeres que decidieron redefinir la experiencia inmobiliaria en
-            Querétaro. Juntas, combinamos décadas de expertise, una red de
-            contactos sólida y una pasión genuina por transformar la vida de
-            nuestros clientes.
+            Tres mujeres que decidieron <em className="text-[#C67B55]">redefinir</em> la
+            experiencia inmobiliaria en Querétaro. Juntas, combinamos décadas de
+            expertise, una red de contactos sólida y una pasión genuina por
+            transformar la vida de nuestros clientes.
           </motion.p>
         </div>
       </section>
 
       {/* Equipo */}
-      <section className="py-24 lg:py-36 bg-[#F5F5F5] border-t border-[#E5E5E5]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex flex-col divide-y divide-[#E5E5E5]">
+      <section className="py-24 lg:py-36 bg-[#16181A] border-t border-[#2A2C2E]">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
+          <div className="flex flex-col divide-y divide-[#2A2C2E]">
             {equipo.map((persona, i) => (
               <FadeIn key={persona.nombre} delay={i * 0.08}>
                 <div className="py-16 lg:py-20 grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                   <div className="lg:col-span-1">
-                    <span className="font-display font-black text-5xl text-[#C9A96E]">
-                      0{i + 1}
+                    <span className="font-display italic text-5xl text-[#C67B55]">
+                      {["I", "II", "III"][i]}
                     </span>
                   </div>
 
                   {/* Avatar placeholder */}
                   <div className="lg:col-span-3">
-                    <div className="aspect-[3/4] bg-gradient-to-br from-[#E8E8E8] to-[#FFFFFF] border border-[#E5E5E5] flex items-center justify-center">
-                      <span className="font-display font-black text-6xl text-[#C9A96E]">
+                    <div className="aspect-[3/4] bg-gradient-to-br from-[#1D2022] via-[#16181A] to-[#0E100F] border border-[#2A2C2E] flex items-center justify-center relative overflow-hidden">
+                      <span className="font-display italic text-6xl text-[#C67B55]/30">
                         O3
                       </span>
+                      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0E100F] to-transparent" />
                     </div>
                   </div>
 
                   <div className="lg:col-span-8">
-                    <span className="inline-block text-[10px] tracking-[0.25em] uppercase font-bold text-white bg-[#1A1A1A] px-3 py-1.5 mb-6">
-                      {persona.rol}
-                    </span>
-                    <h2 className="font-display font-black text-4xl lg:text-6xl tracking-tight text-[#111111] mb-8 uppercase">
+                    <div className="flex items-center gap-3 mb-5">
+                      <span className="w-6 h-px bg-[#C67B55]" />
+                      <p className="text-[10px] tracking-[0.35em] uppercase text-[#C67B55] font-light">
+                        {persona.rol}
+                      </p>
+                    </div>
+                    <h2 className="font-display text-5xl lg:text-6xl text-[#E8E2D6] mb-8 font-normal">
                       {persona.nombre}
                     </h2>
-                    <p className="text-base text-[#6B6B6B] leading-loose mb-10 max-w-xl">
+                    <p className="text-base text-[#8C8478] leading-loose mb-10 max-w-xl">
                       {persona.bio}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-3">
                       {persona.especialidades.map((e) => (
                         <span
                           key={e}
-                          className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#111111] border border-[#1A1A1A] px-3 py-2"
+                          className="text-[10px] tracking-[0.3em] uppercase text-[#E8E2D6] font-light border border-[#2A2C2E] px-4 py-2"
                         >
                           {e}
                         </span>
@@ -147,22 +162,26 @@ export default function NosotrasPage() {
       </section>
 
       {/* Valores */}
-      <section className="py-32 lg:py-48 bg-[#FFFFFF] border-t border-[#E5E5E5]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="py-32 lg:py-48 bg-[#0E100F] border-t border-[#2A2C2E]">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <FadeIn>
-            <p className="text-[11px] tracking-[0.35em] uppercase font-bold text-[#C9A96E] mb-20">
-              Nuestros valores
-            </p>
+            <div className="flex items-center gap-4 mb-20">
+              <span className="font-display italic text-3xl text-[#C67B55]">IV.</span>
+              <span className="w-12 h-px bg-[#C67B55]" />
+              <p className="text-[11px] tracking-[0.4em] uppercase text-[#8C8478] font-light">
+                Nuestros valores
+              </p>
+            </div>
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
             {valores.map((v, i) => (
               <FadeIn key={v.titulo} delay={i * 0.08}>
-                <div className="border-t-2 border-[#1A1A1A] pt-8">
-                  <h3 className="font-display font-black text-3xl tracking-tight text-[#111111] mb-5 uppercase">
-                    {v.titulo}
+                <div className="border-t border-[#C67B55] pt-8">
+                  <h3 className="font-display text-3xl text-[#E8E2D6] mb-5 font-normal">
+                    <em className="text-[#C67B55]">{v.titulo}</em>
                   </h3>
-                  <p className="text-base text-[#6B6B6B] leading-relaxed">
+                  <p className="text-base text-[#8C8478] leading-relaxed">
                     {v.desc}
                   </p>
                 </div>
@@ -173,19 +192,28 @@ export default function NosotrasPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-36 bg-[#F5F5F5] border-t border-[#E5E5E5]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-10">
+      <section className="relative py-24 lg:py-36 bg-[#16181A] border-t border-[#2A2C2E] overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] max-w-[700px] max-h-[700px] rounded-full pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(198,123,85,0.15) 0%, transparent 60%)",
+          }}
+        />
+        <div className="relative max-w-6xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-10">
           <FadeIn>
-            <h2 className="font-display font-black text-4xl lg:text-6xl tracking-tight text-[#111111] uppercase">
-              ¿Listas para trabajar juntas?
+            <h2 className="font-display text-4xl lg:text-6xl text-[#E8E2D6] font-normal leading-[1.1]">
+              ¿Listas para <em className="text-[#C67B55]">trabajar juntas</em>?
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
             <Link
               href="/contacto"
-              className="inline-flex items-center px-12 py-5 bg-[#1A1A1A] text-white text-xs tracking-[0.25em] uppercase font-bold hover:bg-[#C9A96E] hover:text-[#1A1A1A] transition-colors duration-300 whitespace-nowrap rounded-sm"
+              className="group inline-flex items-center gap-4 px-10 py-4 bg-[#C67B55] text-[#0E100F] text-[11px] tracking-[0.3em] uppercase font-medium hover:bg-[#E8E2D6] transition-colors duration-500 whitespace-nowrap"
             >
-              Contáctanos
+              <span>Contáctanos</span>
+              <span className="inline-block transition-transform duration-500 group-hover:translate-x-1">→</span>
             </Link>
           </FadeIn>
         </div>
