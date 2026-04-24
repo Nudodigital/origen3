@@ -9,21 +9,21 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F5EFE6] border-t border-[#D5CEC6]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
-        <div className="grid md:grid-cols-3 gap-12 mb-14">
+    <footer className="bg-[#F5F5F5] border-t border-[#E5E5E5]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div className="md:col-span-1">
-            <Link href="/" className="inline-block font-display text-2xl text-[#1A1A1A] tracking-[0.12em] uppercase mb-5">
-              Origen<span className="text-[#B8956A]">3</span>
+            <Link href="/" className="inline-block font-display font-black text-3xl text-[#111111] tracking-tight uppercase mb-6">
+              Origen<span className="text-[#C9A96E]">3</span>
             </Link>
-            <p className="text-sm text-[#9C9189] leading-relaxed max-w-xs">
+            <p className="text-base text-[#6B6B6B] leading-relaxed max-w-xs">
               Especialistas en bienes raíces de alto standing en Querétaro.
               Tres expertas. Un solo compromiso.
             </p>
           </div>
 
           <div>
-            <p className="text-[10px] tracking-[0.25em] uppercase text-[#B8956A] mb-6">
+            <p className="text-[11px] tracking-[0.25em] uppercase font-bold text-[#C9A96E] mb-8">
               Navegación
             </p>
             <ul className="flex flex-col gap-3">
@@ -31,7 +31,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#9C9189] hover:text-[#2C2C2C] transition-colors duration-300"
+                    className="text-base text-[#111111] hover:text-[#C9A96E] transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -41,15 +41,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-[10px] tracking-[0.25em] uppercase text-[#B8956A] mb-6">
+            <p className="text-[11px] tracking-[0.25em] uppercase font-bold text-[#C9A96E] mb-8">
               Contacto
             </p>
-            <ul className="flex flex-col gap-3 text-sm text-[#9C9189]">
+            <ul className="flex flex-col gap-3 text-base text-[#111111]">
               <li>Querétaro, México</li>
               <li>
                 <a
                   href="mailto:hola@origen3.com.mx"
-                  className="hover:text-[#2C2C2C] transition-colors duration-300"
+                  className="hover:text-[#C9A96E] transition-colors duration-300"
                 >
                   hola@origen3.com.mx
                 </a>
@@ -59,7 +59,7 @@ export default function Footer() {
                   href="https://wa.me/524421234567"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#2C2C2C] transition-colors duration-300"
+                  className="hover:text-[#C9A96E] transition-colors duration-300"
                 >
                   WhatsApp
                 </a>
@@ -68,11 +68,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#D5CEC6] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-[#9C9189]">
+        <div className="border-t border-[#E5E5E5] pt-10 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs tracking-[0.15em] uppercase font-semibold text-[#6B6B6B]">
             © {new Date().getFullYear()} Origen3. Todos los derechos reservados.
           </p>
-          <p className="text-xs text-[#D5CEC6]">
+          <p className="text-xs tracking-[0.15em] uppercase font-semibold text-[#6B6B6B]">
             Desarrollado por Nudo Digital
           </p>
         </div>

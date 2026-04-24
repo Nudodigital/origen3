@@ -62,13 +62,13 @@ export default function NosotrasPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 lg:pt-44 lg:pb-28 bg-[#FAF7F2]">
+      <section className="pt-40 pb-24 lg:pt-52 lg:pb-36 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease }}
-            className="text-[10px] tracking-[0.35em] uppercase text-[#B8956A] mb-6"
+            className="text-[11px] tracking-[0.35em] uppercase font-bold text-[#C9A96E] mb-8"
           >
             El equipo
           </motion.p>
@@ -77,7 +77,7 @@ export default function NosotrasPage() {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.85, delay: 0.1, ease }}
-              className="font-display text-[clamp(3rem,8vw,7rem)] leading-none text-[#1A1A1A] mb-10"
+              className="font-display font-black text-[clamp(4rem,10vw,9rem)] leading-[0.9] tracking-tighter text-[#111111] mb-12 uppercase"
             >
               Nosotras
             </motion.h1>
@@ -86,7 +86,7 @@ export default function NosotrasPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5, ease }}
-            className="text-lg text-[#9C9189] max-w-2xl leading-relaxed"
+            className="text-xl lg:text-2xl text-[#6B6B6B] max-w-3xl leading-relaxed"
           >
             Tres mujeres que decidieron redefinir la experiencia inmobiliaria en
             Querétaro. Juntas, combinamos décadas de expertise, una red de
@@ -97,42 +97,42 @@ export default function NosotrasPage() {
       </section>
 
       {/* Equipo */}
-      <section className="py-20 lg:py-28 bg-[#F5EFE6] border-t border-[#D5CEC6]">
+      <section className="py-24 lg:py-36 bg-[#F5F5F5] border-t border-[#E5E5E5]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex flex-col divide-y divide-[#D5CEC6]">
+          <div className="flex flex-col divide-y divide-[#E5E5E5]">
             {equipo.map((persona, i) => (
               <FadeIn key={persona.nombre} delay={i * 0.08}>
-                <div className="py-14 lg:py-16 grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+                <div className="py-16 lg:py-20 grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
                   <div className="lg:col-span-1">
-                    <span className="font-display text-4xl text-[#D5CEC6]">
+                    <span className="font-display font-black text-5xl text-[#C9A96E]">
                       0{i + 1}
                     </span>
                   </div>
 
                   {/* Avatar placeholder */}
                   <div className="lg:col-span-3">
-                    <div className="aspect-[3/4] bg-gradient-to-br from-[#EDE8E1] to-[#FAF7F2] border border-[#D5CEC6] flex items-center justify-center">
-                      <span className="font-display text-5xl text-[#D5CEC6]">
+                    <div className="aspect-[3/4] bg-gradient-to-br from-[#E8E8E8] to-[#FFFFFF] border border-[#E5E5E5] flex items-center justify-center">
+                      <span className="font-display font-black text-6xl text-[#C9A96E]">
                         O3
                       </span>
                     </div>
                   </div>
 
                   <div className="lg:col-span-8">
-                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#B8956A] mb-3">
+                    <span className="inline-block text-[10px] tracking-[0.25em] uppercase font-bold text-white bg-[#1A1A1A] px-3 py-1.5 mb-6">
                       {persona.rol}
-                    </p>
-                    <h2 className="font-display text-3xl lg:text-4xl text-[#1A1A1A] mb-6">
+                    </span>
+                    <h2 className="font-display font-black text-4xl lg:text-6xl tracking-tight text-[#111111] mb-8 uppercase">
                       {persona.nombre}
                     </h2>
-                    <p className="text-sm text-[#9C9189] leading-loose mb-8 max-w-lg">
+                    <p className="text-base text-[#6B6B6B] leading-loose mb-10 max-w-xl">
                       {persona.bio}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {persona.especialidades.map((e) => (
                         <span
                           key={e}
-                          className="text-[10px] tracking-[0.2em] uppercase text-[#9C9189] border border-[#D5CEC6] px-3 py-1.5"
+                          className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#111111] border border-[#1A1A1A] px-3 py-2"
                         >
                           {e}
                         </span>
@@ -147,22 +147,22 @@ export default function NosotrasPage() {
       </section>
 
       {/* Valores */}
-      <section className="py-24 lg:py-32 bg-[#FAF7F2] border-t border-[#D5CEC6]">
+      <section className="py-32 lg:py-48 bg-[#FFFFFF] border-t border-[#E5E5E5]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <FadeIn>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8956A] mb-16">
+            <p className="text-[11px] tracking-[0.35em] uppercase font-bold text-[#C9A96E] mb-20">
               Nuestros valores
             </p>
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
             {valores.map((v, i) => (
               <FadeIn key={v.titulo} delay={i * 0.08}>
-                <div className="border-t border-[#D5CEC6] pt-8">
-                  <h3 className="font-display text-2xl text-[#1A1A1A] mb-4">
+                <div className="border-t-2 border-[#1A1A1A] pt-8">
+                  <h3 className="font-display font-black text-3xl tracking-tight text-[#111111] mb-5 uppercase">
                     {v.titulo}
                   </h3>
-                  <p className="text-sm text-[#9C9189] leading-relaxed">
+                  <p className="text-base text-[#6B6B6B] leading-relaxed">
                     {v.desc}
                   </p>
                 </div>
@@ -173,17 +173,17 @@ export default function NosotrasPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-[#F5EFE6] border-t border-[#D5CEC6]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <section className="py-24 lg:py-36 bg-[#F5F5F5] border-t border-[#E5E5E5]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-10">
           <FadeIn>
-            <h2 className="font-display text-3xl lg:text-4xl text-[#1A1A1A]">
+            <h2 className="font-display font-black text-4xl lg:text-6xl tracking-tight text-[#111111] uppercase">
               ¿Listas para trabajar juntas?
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
             <Link
               href="/contacto"
-              className="inline-flex items-center px-8 py-4 bg-[#B8956A] text-[#FAF7F2] text-xs tracking-[0.25em] uppercase font-medium hover:bg-[#D4B896] transition-colors duration-300 whitespace-nowrap"
+              className="inline-flex items-center px-12 py-5 bg-[#1A1A1A] text-white text-xs tracking-[0.25em] uppercase font-bold hover:bg-[#C9A96E] hover:text-[#1A1A1A] transition-colors duration-300 whitespace-nowrap rounded-sm"
             >
               Contáctanos
             </Link>

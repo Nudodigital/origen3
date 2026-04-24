@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #FAF7F2;
-  --color-primary: #B8956A;
-  --color-primary-hover: #D4B896;
-  --color-secondary: #2C2C2C;
-  --color-text: #1A1A1A;
-  --color-muted: #9C9189;
-  --color-surface: #F5EFE6;
-  --color-border: #D5CEC6;
+  --color-background: #FFFFFF;
+  --color-primary: #1A1A1A;
+  --color-accent: #C9A96E;
+  --color-text: #111111;
+  --color-surface: #F5F5F5;
+  --color-border: #E5E5E5;
+  --color-muted: #6B6B6B;
   --font-display: var(--font-playfair);
   --font-body: var(--font-inter);
 }
@@ -18,19 +17,23 @@ html {
 }
 
 body {
-  background-color: #FAF7F2;
-  color: #1A1A1A;
+  background-color: #FFFFFF;
+  color: #111111;
   font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 ::selection {
-  background: #B8956A;
-  color: #FAF7F2;
+  background: #1A1A1A;
+  color: #FFFFFF;
 }
 
 @keyframes ticker {
