@@ -58,19 +58,19 @@ const propiedades = [
     titulo: "Residencial Zibatá",
     tipo: "Casa · Preventa",
     precio: "Desde $4.2 MDP",
-    gradient: "from-[#DDE8DD] to-[#FAFAF8]",
+    gradient: "from-[#DDE8DD] to-[#FAF7F2]",
   },
   {
     titulo: "Juriquilla Grand",
     tipo: "Departamento · Venta",
     precio: "Desde $2.8 MDP",
-    gradient: "from-[#EDE8DC] to-[#FAFAF8]",
+    gradient: "from-[#EDE8DC] to-[#FAF7F2]",
   },
   {
     titulo: "El Marqués Residencial",
     tipo: "Terreno · Inversión",
     precio: "Desde $1.5 MDP",
-    gradient: "from-[#DCE0EE] to-[#FAFAF8]",
+    gradient: "from-[#DCE0EE] to-[#FAF7F2]",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col justify-end pb-20 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAFAF8] via-[#FAFAF8] to-[#F5EFE6]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF7F2] via-[#FAF7F2] to-[#F5EFE6]" />
 
         {/* Background grid texture */}
         <div
@@ -89,15 +89,15 @@ export default function Home() {
               0deg,
               transparent,
               transparent 79px,
-              #1A1714 79px,
-              #1A1714 80px
+              #1A1A1A 79px,
+              #1A1A1A 80px
             ),
             repeating-linear-gradient(
               90deg,
               transparent,
               transparent 79px,
-              #1A1714 79px,
-              #1A1714 80px
+              #1A1A1A 79px,
+              #1A1A1A 80px
             )`,
           }}
         />
@@ -107,7 +107,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3, ease }}
-            className="text-[10px] tracking-[0.35em] uppercase text-[#B8935A] mb-8"
+            className="text-[10px] tracking-[0.35em] uppercase text-[#B8956A] mb-8"
           >
             Bienes Raíces · Querétaro · México
           </motion.p>
@@ -117,10 +117,10 @@ export default function Home() {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.9, delay: 0.1, ease }}
-              className="font-display text-[clamp(4rem,12vw,10rem)] leading-none tracking-tight text-[#1A1714]"
+              className="font-display text-[clamp(4rem,12vw,10rem)] leading-none tracking-tight text-[#1A1A1A]"
             >
               ORIGEN
-              <span className="text-[#B8935A]">3</span>
+              <span className="text-[#B8956A]">3</span>
             </motion.h1>
           </div>
 
@@ -141,7 +141,7 @@ export default function Home() {
             >
               Tres especialistas. Un solo compromiso.
               <br />
-              <span className="text-[#1A1714]">
+              <span className="text-[#1A1A1A]">
                 Hacemos del proceso inmobiliario tu mejor decisión.
               </span>
             </motion.p>
@@ -154,13 +154,13 @@ export default function Home() {
             >
               <Link
                 href="/#propiedades"
-                className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#B8935A] text-[#FAFAF8] text-xs tracking-[0.2em] uppercase font-medium hover:bg-[#1A1714] transition-colors duration-300"
+                className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#B8956A] text-[#FAF7F2] text-xs tracking-[0.2em] uppercase font-medium hover:bg-[#D4B896] transition-colors duration-300"
               >
                 Ver propiedades
               </Link>
               <Link
                 href="/nosotras"
-                className="inline-flex items-center gap-3 px-7 py-3.5 border border-[#D5CEC6] text-[#9C9189] text-xs tracking-[0.2em] uppercase hover:border-[#B8935A] hover:text-[#B8935A] transition-colors duration-300"
+                className="inline-flex items-center gap-3 px-7 py-3.5 border border-[#D5CEC6] text-[#9C9189] text-xs tracking-[0.2em] uppercase hover:border-[#B8956A] hover:text-[#B8956A] transition-colors duration-300"
               >
                 El equipo
               </Link>
@@ -197,13 +197,13 @@ export default function Home() {
       </div>
 
       {/* Manifiesto */}
-      <section className="py-24 lg:py-36 bg-[#FAFAF8]">
+      <section className="py-24 lg:py-36 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div className="lg:col-span-1 hidden lg:flex flex-col items-center gap-4">
-              <div className="w-px h-16 bg-[#B8935A]" />
+              <div className="w-px h-16 bg-[#B8956A]" />
               <p
-                className="text-[10px] tracking-[0.3em] uppercase text-[#B8935A]"
+                className="text-[10px] tracking-[0.3em] uppercase text-[#B8956A]"
                 style={{ writingMode: "vertical-rl" }}
               >
                 Filosofía
@@ -211,9 +211,9 @@ export default function Home() {
             </div>
 
             <FadeIn className="lg:col-span-7">
-              <h2 className="font-display text-[clamp(2rem,5vw,3.75rem)] leading-tight text-[#1A1714]">
+              <h2 className="font-display text-[clamp(2rem,5vw,3.75rem)] leading-tight text-[#1A1A1A]">
                 Transformamos la búsqueda de
-                <em className="not-italic text-[#B8935A]"> propiedades </em>
+                <em className="not-italic text-[#B8956A]"> propiedades </em>
                 en una experiencia extraordinaria.
               </h2>
             </FadeIn>
@@ -234,7 +234,7 @@ export default function Home() {
       <section className="py-24 lg:py-32 bg-[#F5EFE6] border-t border-[#D5CEC6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <FadeIn>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8935A] mb-16">
+            <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8956A] mb-16">
               Servicios
             </p>
           </FadeIn>
@@ -242,11 +242,11 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#D5CEC6]">
             {servicios.map((s, i) => (
               <FadeIn key={s.num} delay={i * 0.08}>
-                <div className="bg-[#F5EFE6] p-8 lg:p-10 group hover:bg-[#FAFAF8] transition-colors duration-500 h-full">
-                  <p className="font-display text-5xl text-[#D5CEC6] group-hover:text-[#B8935A] transition-colors duration-500 mb-8">
+                <div className="bg-[#F5EFE6] p-8 lg:p-10 group hover:bg-[#FAF7F2] transition-colors duration-500 h-full">
+                  <p className="font-display text-5xl text-[#D5CEC6] group-hover:text-[#B8956A] transition-colors duration-500 mb-8">
                     {s.num}
                   </p>
-                  <h3 className="font-display text-2xl text-[#1A1714] mb-4">
+                  <h3 className="font-display text-2xl text-[#1A1A1A] mb-4">
                     {s.titulo}
                   </h3>
                   <p className="text-sm text-[#9C9189] leading-relaxed">
@@ -262,22 +262,22 @@ export default function Home() {
       {/* Propiedades */}
       <section
         id="propiedades"
-        className="py-24 lg:py-32 bg-[#FAFAF8] border-t border-[#D5CEC6]"
+        className="py-24 lg:py-32 bg-[#FAF7F2] border-t border-[#D5CEC6]"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-end justify-between mb-16">
             <FadeIn>
-              <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8935A] mb-3">
+              <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8956A] mb-3">
                 Propiedades
               </p>
-              <h2 className="font-display text-4xl lg:text-5xl text-[#1A1714]">
+              <h2 className="font-display text-4xl lg:text-5xl text-[#1A1A1A]">
                 Destacadas
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
               <Link
                 href="/contacto"
-                className="hidden md:inline-flex text-xs tracking-[0.2em] uppercase text-[#9C9189] hover:text-[#B8935A] transition-colors border-b border-[#D5CEC6] pb-1"
+                className="hidden md:inline-flex text-xs tracking-[0.2em] uppercase text-[#9C9189] hover:text-[#B8956A] transition-colors border-b border-[#D5CEC6] pb-1"
               >
                 Ver todas →
               </Link>
@@ -296,24 +296,24 @@ export default function Home() {
                     className={`aspect-[4/3] bg-gradient-to-br ${p.gradient} relative overflow-hidden mb-5 border border-[#D5CEC6]`}
                   >
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="font-display text-6xl text-[#D5CEC6] group-hover:text-[#B8935A]/30 transition-colors duration-500">
+                      <span className="font-display text-6xl text-[#D5CEC6] group-hover:text-[#B8956A]/30 transition-colors duration-500">
                         O3
                       </span>
                     </div>
                     <div className="absolute bottom-4 left-4 right-4">
-                      <span className="inline-block text-[10px] tracking-[0.25em] uppercase text-[#B8935A] border border-[#B8935A]/40 px-3 py-1 bg-[#FAFAF8]/80">
+                      <span className="inline-block text-[10px] tracking-[0.25em] uppercase text-[#B8956A] border border-[#B8956A]/40 px-3 py-1 bg-[#FAF7F2]/80">
                         {p.tipo}
                       </span>
                     </div>
                   </div>
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-base text-[#1A1714] mb-1 group-hover:text-[#B8935A] transition-colors duration-300">
+                      <h3 className="text-base text-[#1A1A1A] mb-1 group-hover:text-[#B8956A] transition-colors duration-300">
                         {p.titulo}
                       </h3>
                       <p className="text-xs text-[#9C9189]">Querétaro</p>
                     </div>
-                    <p className="text-sm text-[#B8935A] font-medium">
+                    <p className="text-sm text-[#B8956A] font-medium">
                       {p.precio}
                     </p>
                   </div>
@@ -328,15 +328,15 @@ export default function Home() {
       <section className="py-24 lg:py-36 bg-[#F5EFE6] border-t border-[#D5CEC6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <FadeIn>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8935A] mb-6">
+            <p className="text-[10px] tracking-[0.3em] uppercase text-[#B8956A] mb-6">
               Empecemos
             </p>
-            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-tight text-[#1A1714] mb-10 max-w-3xl mx-auto">
+            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-tight text-[#1A1A1A] mb-10 max-w-3xl mx-auto">
               ¿Lista para encontrar tu propiedad ideal?
             </h2>
             <Link
               href="/contacto"
-              className="inline-flex items-center gap-4 px-10 py-4 bg-[#B8935A] text-[#FAFAF8] text-xs tracking-[0.25em] uppercase font-medium hover:bg-[#1A1714] transition-colors duration-300"
+              className="inline-flex items-center gap-4 px-10 py-4 bg-[#B8956A] text-[#FAF7F2] text-xs tracking-[0.25em] uppercase font-medium hover:bg-[#D4B896] transition-colors duration-300"
             >
               Agendar una llamada
             </Link>

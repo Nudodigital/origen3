@@ -30,7 +30,7 @@ function FadeIn({
 }
 
 const inputClass =
-  "w-full bg-transparent border-b border-[#D5CEC6] text-[#1A1714] text-sm py-4 placeholder-[#9C9189] focus:outline-none focus:border-[#B8935A] transition-colors duration-300";
+  "w-full bg-transparent border-b border-[#D5CEC6] text-[#1A1A1A] text-sm py-4 placeholder-[#9C9189] focus:outline-none focus:border-[#B8956A] transition-colors duration-300";
 
 export default function ContactoPage() {
   const [enviado, setEnviado] = useState(false);
@@ -43,13 +43,13 @@ export default function ContactoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 lg:pt-44 lg:pb-28 bg-[#FAFAF8]">
+      <section className="pt-36 pb-20 lg:pt-44 lg:pb-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease }}
-            className="text-[10px] tracking-[0.35em] uppercase text-[#B8935A] mb-6"
+            className="text-[10px] tracking-[0.35em] uppercase text-[#B8956A] mb-6"
           >
             Hablemos
           </motion.p>
@@ -58,7 +58,7 @@ export default function ContactoPage() {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.85, delay: 0.1, ease }}
-              className="font-display text-[clamp(3rem,8vw,7rem)] leading-none text-[#1A1714] mb-10"
+              className="font-display text-[clamp(3rem,8vw,7rem)] leading-none text-[#1A1A1A] mb-10"
             >
               Contacto
             </motion.h1>
@@ -83,7 +83,7 @@ export default function ContactoPage() {
             <FadeIn>
               <div className="flex flex-col gap-12">
                 <div>
-                  <p className="text-[10px] tracking-[0.25em] uppercase text-[#B8935A] mb-8">
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-[#B8956A] mb-8">
                     Información de contacto
                   </p>
                   <ul className="flex flex-col gap-6">
@@ -93,7 +93,7 @@ export default function ContactoPage() {
                       </span>
                       <a
                         href="mailto:hola@origen3.com.mx"
-                        className="text-base text-[#1A1714] hover:text-[#B8935A] transition-colors"
+                        className="text-base text-[#1A1A1A] hover:text-[#B8956A] transition-colors"
                       >
                         hola@origen3.com.mx
                       </a>
@@ -102,7 +102,7 @@ export default function ContactoPage() {
                       <span className="text-xs tracking-[0.15em] uppercase text-[#D5CEC6]">
                         Ubicación
                       </span>
-                      <p className="text-base text-[#1A1714]">
+                      <p className="text-base text-[#1A1A1A]">
                         Querétaro, México
                       </p>
                     </li>
@@ -114,7 +114,7 @@ export default function ContactoPage() {
                         href="https://wa.me/524421234567"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-base text-[#1A1714] hover:text-[#B8935A] transition-colors"
+                        className="text-base text-[#1A1A1A] hover:text-[#B8956A] transition-colors"
                       >
                         +52 442 123 4567
                       </a>
@@ -135,8 +135,8 @@ export default function ContactoPage() {
             <FadeIn delay={0.15}>
               {enviado ? (
                 <div className="flex flex-col items-start justify-center h-full py-20">
-                  <div className="w-10 h-px bg-[#B8935A] mb-8" />
-                  <p className="font-display text-3xl text-[#1A1714] mb-4">
+                  <div className="w-10 h-px bg-[#B8956A] mb-8" />
+                  <p className="font-display text-3xl text-[#1A1A1A] mb-4">
                     Recibido.
                   </p>
                   <p className="text-sm text-[#9C9189]">
@@ -172,16 +172,16 @@ export default function ContactoPage() {
                       <option value="" disabled className="text-[#9C9189]">
                         ¿En qué podemos ayudarte?
                       </option>
-                      <option value="compra" className="bg-[#FAFAF8]">
+                      <option value="compra" className="bg-[#FAF7F2]">
                         Comprar una propiedad
                       </option>
-                      <option value="venta" className="bg-[#FAFAF8]">
+                      <option value="venta" className="bg-[#FAF7F2]">
                         Vender una propiedad
                       </option>
-                      <option value="preventa" className="bg-[#FAFAF8]">
+                      <option value="preventa" className="bg-[#FAF7F2]">
                         Preventa
                       </option>
-                      <option value="asesoria" className="bg-[#FAFAF8]">
+                      <option value="asesoria" className="bg-[#FAF7F2]">
                         Asesoría patrimonial
                       </option>
                     </select>
@@ -194,7 +194,7 @@ export default function ContactoPage() {
 
                   <button
                     type="submit"
-                    className="self-start inline-flex items-center px-8 py-4 bg-[#B8935A] text-[#FAFAF8] text-xs tracking-[0.25em] uppercase font-medium hover:bg-[#1A1714] transition-colors duration-300"
+                    className="self-start inline-flex items-center px-8 py-4 bg-[#B8956A] text-[#FAF7F2] text-xs tracking-[0.25em] uppercase font-medium hover:bg-[#D4B896] transition-colors duration-300"
                   >
                     Enviar mensaje
                   </button>
